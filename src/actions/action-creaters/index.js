@@ -3,16 +3,25 @@ import {
   fetchArticlesSuccess,
   fetchArticlesFailure,
 } from './articles';
+
 import {
   fetchTeams,
   fetchTeamsSuccess,
   fetchTeamsFailure,
 } from './teams';
+
 import {
   fetchAuthors,
   fetchAuthorsSuccess,
   fetchAuthorsFailure,
 } from './authors';
+
+import {
+  textTyping,
+  buttonClick,
+  numbersTyping,
+  showModifiedText,
+} from './tools';
 
 export {
   fetchArticles,
@@ -24,4 +33,8 @@ export {
   fetchTeams,
   fetchTeamsSuccess,
   fetchTeamsFailure,
+  textTyping,
+  buttonClick,
+  numbersTyping,
+  showModifiedText,
 }

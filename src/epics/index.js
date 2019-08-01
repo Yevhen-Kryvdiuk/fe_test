@@ -3,10 +3,14 @@ import {
   fetchAuthorsEpic,
   fetchTeamsEpic,
   fetchArticlesEpic } from './fetch-data';
+import {
+  textWorkingEpic } from './tools';
 
 const rootEpic = combineEpics(
   fetchAuthorsEpic,
   fetchTeamsEpic,
-  fetchArticlesEpic);
+  fetchArticlesEpic,
+  textWorkingEpic,
+  );
 
 export default rootEpic;

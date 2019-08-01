@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navigator from '../navigator';
-import { Articles, Teams, TeamsInfo } from '../pages';
+import { Articles, Teams, TeamsInfo, Tools } from '../pages';
 
 
 class App extends Component {
@@ -22,6 +22,10 @@ class App extends Component {
           <Route
             path="/teams-info/:id"
             component={TeamsInfo}
+          />
+          <Route
+            path="/tools"
+            component={Tools}
           />
         </Switch>
       </div>
