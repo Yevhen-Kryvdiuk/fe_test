@@ -1,7 +1,6 @@
 import {
   TEXT_TYPING,
   SHOW_MODIFIED_TEXT,
-  BUTTON_CLICK,
   BUTTON_DBCLICK,
   NUMBERS_TYPING,
   SHOW_SUM,
@@ -12,13 +11,12 @@ const initialState = {
   modifiedText: '',
   isDbClick: false,
   numbers: '',
-  sum: ''
+  sum: 0
 
 };
 
 const actionHandlers = {
   [TEXT_TYPING]: (state, action) => {
-    console.log(1);
     return {
       ...state,
       text: action.payload

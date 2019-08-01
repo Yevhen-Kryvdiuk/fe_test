@@ -2,14 +2,23 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import { bindActionCreators } from 'redux';
 import InputWorker from '../input-worker';
-import {textTyping} from "../../actions/action-creaters";
+import ButtonWorker from "../button-worker";
+import {
+  textTyping,
+  numbersTyping,
+  buttonClick } from "../../actions/action-creaters";
 
 class Tools extends Component {
   render() {
     const {
       text,
       modifiedText,
+      numbers,
+      sum,
+      isDbClick,
       textTyping,
+      numbersTyping,
+      buttonClick,
     } = this.props;
     return (
       <div>
@@ -19,12 +28,15 @@ class Tools extends Component {
           outputValue={modifiedText}
           action={textTyping}
         />
-        {/*<InputWorker*/}
-        {/*  name={'Get the sum'}*/}
-        {/*  inputValue={}*/}
-        {/*  outputValue={}*/}
-        {/*  action={}*/}
-        {/*/>*/}
+        <InputWorker
+          name={'Get the sum'}
+          inputValue={numbers}
+          outputValue={sum}
+          action={numbersTyping}
+        />
+        <ButtonWorker
+          isDbClick={isDbClick}
+          action={buttonClick}/>
       </div>
     );
   }
@@ -34,8 +46,9 @@ const mapStateToProps = state => ({ ...state.toolsState });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({
-    textTyping
+    textTyping,
+    numbersTyping,
+    buttonClick
   }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tools);
-

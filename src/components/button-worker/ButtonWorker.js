@@ -2,17 +2,17 @@ import React from 'react';
 
 function ButtonWorker(props) {
   const {
-    name,
-    inputValue,
-    outputValue,
+    isDbClick,
     action
   } = props;
+  const result = isDbClick
+    ? 'It was double click!'
+    : 'I\'m waiting.';
   return (
     <>
       <label>
-        Capital letters of all words:
-        <button >{name}</button>
-        <input type="text" disabled={true} value={outputValue}/>
+        <button onClick={action}>Double click</button>
+        <input type="text" disabled={true} value={result}/>
       </label>
     </>
   );

@@ -18,9 +18,11 @@ import {
 
 import {
   textTyping,
-  buttonClick,
-  numbersTyping,
   showModifiedText,
+  buttonClick,
+  buttonDbClick,
+  numbersTyping,
+  showSum,
 } from './tools';
 
 export {
@@ -35,6 +37,8 @@ export {
   fetchTeamsFailure,
   textTyping,
   buttonClick,
+  buttonDbClick,
   numbersTyping,
   showModifiedText,
+  showSum,
 }

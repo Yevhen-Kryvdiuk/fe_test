@@ -30,6 +30,13 @@ const buttonClick = () => {
   };
 };
 
+const buttonDbClick = (value) => {
+  return {
+    type: BUTTON_DBCLICK,
+    payload: value
+  };
+};
+
 
 const numbersTyping = (value) => {
   return {
@@ -38,10 +45,18 @@ const numbersTyping = (value) => {
   };
 };
 
+const showSum = (value) => {
+  return {
+    type: SHOW_SUM,
+    payload: value
+  };
+};
+
 export {
   textTyping,
   showModifiedText,
   buttonClick,
+  buttonDbClick,
   numbersTyping,
-
+  showSum,
 }
