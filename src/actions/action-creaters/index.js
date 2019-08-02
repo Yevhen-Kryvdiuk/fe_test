@@ -8,6 +8,7 @@ import {
   fetchTeams,
   fetchTeamsSuccess,
   fetchTeamsFailure,
+  findTeam,
 } from './teams';
 
 import {
@@ -41,4 +42,5 @@ export {
   numbersTyping,
   showModifiedText,
   showSum,
+  findTeam,
 }

@@ -2,6 +2,7 @@ import {
   FETCH_TEAMS_REQUEST,
   FETCH_TEAMS_SUCCESS,
   FETCH_TEAMS_FAILURE,
+  FIND_TEAM,
 } from '../action-types';
 
 
@@ -28,8 +29,17 @@ const fetchTeamsFailure = (message) => {
   };
 };
 
+const findTeam = (team) => {
+  console.log(team)
+  return {
+    type: FIND_TEAM,
+    payload: team
+  };
+};
+
 export {
   fetchTeams,
   fetchTeamsSuccess,
   fetchTeamsFailure,
+  findTeam
 }

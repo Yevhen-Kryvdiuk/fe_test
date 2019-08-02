@@ -2,10 +2,12 @@ import {
   FETCH_TEAMS_REQUEST,
   FETCH_TEAMS_SUCCESS,
   FETCH_TEAMS_FAILURE,
+  FIND_TEAM,
 } from '../actions/action-types';
 
 const initialState = {
   teams: [],
+  team: null,
   teamsLoading: false,
   teamsLoaded: false,
   teamsError: null,
@@ -31,6 +33,12 @@ const actionHandlers = {
     return {
       ...state,
       teamsError: action.payload,
+    };
+  },
+  [FIND_TEAM]: (state, action) => {
+    return {
+      ...state,
+      team: action.payload,
     };
   },
 };

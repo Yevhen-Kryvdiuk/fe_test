@@ -3,8 +3,7 @@ import capitalizeForAll from '../helpers/capitalizeForAll';
 import getSum from '../helpers/getSum';
 import { map,
   bufferWhen,
-  debounceTime,
-  filter } from 'rxjs/operators';
+  debounceTime} from 'rxjs/operators';
 
 import {
   NUMBERS_TYPING,
