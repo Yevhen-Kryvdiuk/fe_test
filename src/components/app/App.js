@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import './App.css';
 import Navigator from '../navigator';
 import { Articles, Teams, TeamsInfo, Tools } from '../pages';
 
 
 class App extends Component {
+  goBack(){
+    this.props.history.goBack();
+  }
+
   render() {
     return (
       <div className="app">
         <Navigator/>
+        <button onClick={()=>this.goBack()}>Go Back</button>
         <Switch>
           <Route
             path="/"
@@ -33,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
