@@ -6,7 +6,7 @@ import {
 import {
   textWorkingEpic,
   numbersWorkingEpic,
-  clicksEpic} from './tools';
+  clicksEpic } from './tools';
 
 const rootEpic = combineEpics(
   fetchAuthorsEpic,

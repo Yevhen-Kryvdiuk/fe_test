@@ -1,17 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import {
+  fetchTeams,
+  fetchArticles,
+  fetchAuthors, } from '../../actions/action-creaters';
 import {
   selectTeamArticlesDescription,
   selectLoading,
   selectLoaded,
-  selectError
-} from '../../selectors/selector';
+  selectError, } from '../../selectors/selector';
 
-import {
-  fetchTeams,
-  fetchArticles,
-  fetchAuthors } from '../../actions/action-creaters';
 
 class TeamArticlesDescription extends Component {
   componentDidMount() {

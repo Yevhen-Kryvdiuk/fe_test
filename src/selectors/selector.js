@@ -1,4 +1,4 @@
-import getTeamArticlesDescription from '../helpers/ramdaTest';
+import { getTeamArticlesDescription } from '../helpers';
 
 const selectTeamArticlesDescription = (state, id) => {
   const { authorsState, articlesState, teamsState} = state;

@@ -1,11 +1,11 @@
-import TeamsInfo from "./TeamsInfo";
-import Teams from "./Teams";
-import Articles from "./Articles";
+import TeamsInfo from './TeamsInfo';
+import Articles from './Articles';
 import Tools from './Tools';
+import Teams from './Teams';
 
 export {
   TeamsInfo,
-  Teams,
   Articles,
   Tools,
+  Teams,
 };

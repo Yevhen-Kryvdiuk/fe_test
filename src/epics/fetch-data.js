@@ -16,11 +16,11 @@ import {
   fetchAuthorsFailure,
   fetchTeamsSuccess,
   fetchTeamsFailure
-} from "../actions/action-creaters";
+} from '../actions/action-creaters';
 
 const apiBase = 'https://api-team-articles.herokuapp.com/';
 
-const fetchAuthorsEpic = (action$, state$) => action$.pipe(
+const fetchAuthorsEpic = (action$) => action$.pipe(
   ofType(FETCH_AUTHORS_REQUEST),
   switchMap(() => ajax.getJSON(`${apiBase}authors`).pipe(
     map(authors => fetchAuthorsSuccess(authors))
@@ -28,7 +28,7 @@ const fetchAuthorsEpic = (action$, state$) => action$.pipe(
   catchError(error => of(fetchAuthorsFailure(error.message)))
 );
 
-const fetchArticlesEpic = (action$, state$) => action$.pipe(
+const fetchArticlesEpic = (action$) => action$.pipe(
   ofType(FETCH_ARTICLES_REQUEST),
   switchMap(() => ajax.getJSON(`${apiBase}articles`).pipe(
     map(articles => fetchArticlesSuccess(articles))
@@ -36,7 +36,7 @@ const fetchArticlesEpic = (action$, state$) => action$.pipe(
   catchError(error => of(fetchArticlesFailure(error.message)))
 );
 
-const fetchTeamsEpic = (action$, state$) => action$.pipe(
+const fetchTeamsEpic = (action$) => action$.pipe(
   ofType(FETCH_TEAMS_REQUEST),
   switchMap(() => ajax.getJSON(`${apiBase}teams`).pipe(
     map(teams => fetchTeamsSuccess(teams))

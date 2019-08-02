@@ -1,9 +1,9 @@
 import { ofType } from 'redux-observable';
-import capitalizeForAll from '../helpers/capitalizeForAll';
-import getSum from '../helpers/getSum';
-import { map,
+import { capitalizeForAll, getSum } from '../helpers';
+import {
+  map,
   bufferWhen,
-  debounceTime} from 'rxjs/operators';
+  debounceTime } from 'rxjs/operators';
 
 import {
   NUMBERS_TYPING,
@@ -17,17 +17,17 @@ import {
   buttonDbClick
 } from "../actions/action-creaters";
 
-const textWorkingEpic = (action$, state$) => action$.pipe(
+const textWorkingEpic = (action$) => action$.pipe(
   ofType(TEXT_TYPING),
   map(action => showModifiedText(capitalizeForAll(action.payload))),
 );
 
-const numbersWorkingEpic = (action$, state$) => action$.pipe(
+const numbersWorkingEpic = (action$) => action$.pipe(
   ofType(NUMBERS_TYPING),
   map(action => showSum(getSum(action.payload))),
 );
 
-const clicksEpic = (action$, state$) => action$.pipe(
+const clicksEpic = (action$) => action$.pipe(
   ofType(BUTTON_CLICK),
   bufferWhen(() => action$.pipe(debounceTime(250))),
   map(list => list.length >= 2
@@ -38,4 +38,4 @@ const clicksEpic = (action$, state$) => action$.pipe(
 export{
   textWorkingEpic,
   numbersWorkingEpic,
-  clicksEpic};
+  clicksEpic };

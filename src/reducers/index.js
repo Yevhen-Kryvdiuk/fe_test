@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 import authorsReducer from './authors';
 import articlesReducer from './articles';
 import teamsReducer from './teams';

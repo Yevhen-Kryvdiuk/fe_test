@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AuthorsList({authors}) {
+function AuthorsList({ authors }) {
   const authors = authors.length > 0
     ? authors.map(item => <li key={item.id}>{item.name}</li>)
     : <li>anonymous</li>;

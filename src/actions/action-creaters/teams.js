@@ -30,7 +30,6 @@ const fetchTeamsFailure = (message) => {
 };
 
 const findTeam = (team) => {
-  console.log(team)
   return {
     type: FIND_TEAM,
     payload: team
