@@ -7,17 +7,23 @@ import './Pages.css';
 
 function Teams(props) {
   const { team, findTeam } = props;
+  const Input = <label className="worker-item">
+    Indicate command number:
+    <input
+      type="text"
+      onChange={event => findTeam(event.target.value)}/>
+  </label>;
   if (team) {
     return (
-      <div className="page">
-        <input type="text" onChange={event => findTeam(event.target.value)}/>
+      <div className="page tools">
+        {Input}
         <TeamArticlesDescription teamId = {team}/>
       </div>
     );
   }
   return (
-    <div className="page">
-      <input type="text" onChange={event => findTeam(event.target.value)}/>
+    <div className="page tools">
+      {Input}
     </div>
   )
 

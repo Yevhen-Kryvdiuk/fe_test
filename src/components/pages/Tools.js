@@ -20,7 +20,7 @@ function Tools(props) {
     buttonClick,
   } = props;
   return (
-    <div>
+    <div className="page tools">
       <InputWorker
         name={'Capital letters of all words:'}
         inputValue={text}

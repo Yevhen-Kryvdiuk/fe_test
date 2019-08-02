@@ -1,4 +1,5 @@
 import React from 'react';
+import './ButtonWorker.css'
 
 function ButtonWorker(props) {
   const {
@@ -10,7 +11,7 @@ function ButtonWorker(props) {
     : 'I\'m waiting.';
   return (
     <>
-      <label>
+      <label className="worker-item">
         <button onClick={action}>Double click</button>
         <input type="text" disabled={true} value={result}/>
       </label>
