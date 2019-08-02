@@ -1,0 +1,8 @@
+.worker-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}
